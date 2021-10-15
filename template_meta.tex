@@ -1,0 +1,103 @@
+\usepackage[numbers,square,sort,comma]{StyFiles/natbib}
+\usepackage{StyFiles/natbibspacing}
+
+% External Document
+% \usepackage{xr}
+% \externaldocument{nips_2021_appendix}
+
+%% Contents
+\usepackage{makeidx}
+
+%% Figures
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\usepackage{hyperref}
+\usepackage{xcolor}         % colors
+\usepackage{subcaption}
+
+%% Features
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{StyFiles/fancyhdr}
+\usepackage{StyFiles/wrapfig}
+\usepackage{url}
+\usepackage{makecell}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+%% Formats
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage[toc,page]{appendix}
+\usepackage[font=small,labelfont=bf]{caption}
+% \usepackage[font=footnotesize]{subfig}
+\usepackage{StyFiles/hyphenat}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%% Algos
+\usepackage{StyFiles/algorithm}
+\usepackage{StyFiles/algorithmic}
+% Todo: remove algorithm2e?
+\usepackage[algo2e,ruled,vlined,linesnumbered]{algorithm2e}
+% Do NOT use the algorithm floating environment provided by
+% algorithm.sty (by the same authors) or algorithm2e.sty (by
+% Christophe Fiorio) as the IEEE does not use dedicated algorithm
+% float types and packages that provide these will not provide
+% correct IEEE style captions.
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+
+%% For maths
+\usepackage[cmex10]{amsmath}
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{amssymb,amsthm}
+\usepackage{array}
+\input{math_commands.tex}
+
+%% Commands
+\newcommand{\red}[1]{\textcolor[HTML]{EB4335}{#1}}
+\newcommand{\blue}[1]{\textcolor[HTML]{4285F4}{#1}}
+\newcommand{\linkblue}[1]{\textcolor[HTML]{2E649E}{#1}}
+
+\definecolor{myLinkColor}{rgb}{0.18,0.39,0.62}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=myLinkColor,
+  filecolor=myLinkColor,
+  urlcolor=myLinkColor,
+  citecolor=myLinkColor,
+}
+
+% Math
+\newcommand{\mmqp}[3]{\textrm{\sc MaxMarginQP}\!\left(\{\by_t, #1\}_{t=1}^{T}, #2, #3\right)}
+\newcommand{\energy}[1]{\ensuremath{E\!\left(#1\right)}}
+\newcommand{\bigCI}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+% Indicator Function
+\newcommand{\ind}[1]{\ensuremath{\makebox[.3ex][l]{[}\makebox{[}#1\makebox[.3ex][l]{]}\makebox{]}}}
+
+% Reference Shortcuts
+\renewcommand{\citename}{\citet}
+\renewcommand{\cite}{\citep}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
+
+% Text
+\newcommand{\eg}{e.g.,~}
+\newcommand{\ie}{i.e.,~}
+
+
+%% Environments
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{obs}[thm]{Observation}
+\newtheorem{defn}[thm]{Definition}
+
